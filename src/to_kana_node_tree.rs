@@ -885,6 +885,71 @@ lazy_static! {
                             },
                         ),
                         (
+                            'z',
+                            Node {
+                                transitions: vec![
+                                    (
+                                        'i',
+                                        Node {
+                                            transitions: vec![],
+                                            output: Some("ぢ"),
+                                        },
+                                    ),
+                                    (
+                                        'u',
+                                        Node {
+                                            transitions: vec![],
+                                            output: Some("づ"),
+                                        },
+                                    ),
+                                    (
+                                        'y',
+                                        Node {
+                                            transitions: vec![
+                                                (
+                                                    'a',
+                                                    Node {
+                                                        transitions: vec![],
+                                                        output: Some("ぢゃ"),
+                                                    },
+                                                ),
+                                                (
+                                                    'e',
+                                                    Node {
+                                                        transitions: vec![],
+                                                        output: Some("ぢぇ"),
+                                                    },
+                                                ),
+                                                (
+                                                    'i',
+                                                    Node {
+                                                        transitions: vec![],
+                                                        output: Some("ぢぃ"),
+                                                    },
+                                                ),
+                                                (
+                                                    'o',
+                                                    Node {
+                                                        transitions: vec![],
+                                                        output: Some("ぢょ"),
+                                                    },
+                                                ),
+                                                (
+                                                    'u',
+                                                    Node {
+                                                        transitions: vec![],
+                                                        output: Some("ぢゅ"),
+                                                    },
+                                                ),
+                                            ],
+                                            output: None,
+                                        },
+                                    ),
+                                ],
+                                output: None,
+                            },
+                        ),
+                        (
                             'i',
                             Node {
                                 transitions: vec![],
