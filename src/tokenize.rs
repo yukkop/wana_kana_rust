@@ -1,7 +1,7 @@
 //! Splits input into array of strings separated by opinionated
-//! [`TokenType`](crate::tokenize::TokenType).
+//! [`TokenType`].
 //!
-//! [`tokenize_detailed`](crate::tokenize::tokenize_detailed) returns an
+//! [`tokenize_detailed`] returns an
 //! array containing `{ TokenType, String }` instead of `String`
 //!
 //! # Example
@@ -58,7 +58,7 @@ pub enum TokenType {
 fn get_type(input: char, compact: bool) -> TokenType {
     if compact {
         match input {
-            ' ' => TokenType::En,   // En Space
+            ' ' => TokenType::En,  // En Space
             '　' => TokenType::Ja, // Ja Space
             input
                 if is_char_japanese_number(input)
@@ -74,7 +74,7 @@ fn get_type(input: char, compact: bool) -> TokenType {
         }
     } else {
         match input {
-            ' ' => TokenType::Space,   // En Space
+            ' ' => TokenType::Space,  // En Space
             '　' => TokenType::Space, // Ja Space
             input if is_char_japanese_number(input) => TokenType::JaNum,
             input if is_char_latin_number(input) => TokenType::EnNum,
@@ -91,7 +91,7 @@ fn get_type(input: char, compact: bool) -> TokenType {
 }
 
 /// Tokenizes the text. Splits input into array of strings separated by opinionated
-/// [`TokenType`](crate::tokenize::TokenType).
+/// [`TokenType`].
 ///
 /// # Example
 /// ```
@@ -107,7 +107,7 @@ pub fn tokenize(input: &str) -> Vec<String> {
 }
 
 /// Tokenizes the text. Splits input into array of strings separated by opinionated
-/// [`TokenType`](crate::tokenize::TokenType).
+/// [`TokenType`].
 ///
 /// If `compact` is set, many same-language tokens are combined (spaces + text, kanji + kana,
 /// numeral + punctuation).

@@ -227,4 +227,14 @@ mod tests {
             assert_eq!(to_romaji("シンヨ"), "shin'yo");
         }
     }
+
+    #[test]
+    fn check_panic_issue_13() {
+        assert_eq!(to_romaji("ウーッー"), "uu");
+    }
+
+    #[test]
+    fn check_panic_proptest1() {
+        assert_eq!(to_romaji("ヷー"), "waa");
+    }
 }
